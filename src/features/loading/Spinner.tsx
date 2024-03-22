@@ -1,5 +1,4 @@
 import { FC, useEffect, useLayoutEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { useAppDispatch } from "../../store";
 import { selectLoadingStatus, setLoadingStatus } from "./loadingSlice";
 import { useSelector } from "react-redux";
