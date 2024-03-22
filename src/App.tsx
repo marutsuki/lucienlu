@@ -1,16 +1,21 @@
 import { Suspense } from 'react'
 import './App.css'
-import Spinner from './components/Spinner'
+import Spinner, { Fallback } from './features/loading/Spinner';
 import ForcedDelay from './components/utils/ForcedDelay'
+import Main from './layouts/Main';
+import { Provider } from 'react-redux';
+import store from './store';
 
-const Delay = ForcedDelay(1000000);
+const Delay = ForcedDelay(2000);
 function App() {
   return (
-    <>
-      <Suspense fallback={<Spinner/>}>
+    <Provider store={store}>
+      <Spinner/>
+      <Suspense fallback={<Fallback/>}>
         <Delay/>
+        <Main/>
       </Suspense>
-    </>
+    </Provider>
   )
 }
 

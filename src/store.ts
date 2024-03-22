@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
+import { loadingReducer } from "./features/loading/loadingSlice";
 
 const store = configureStore({
     reducer: {
-
+        loadingReducer,
     },
 })
 
