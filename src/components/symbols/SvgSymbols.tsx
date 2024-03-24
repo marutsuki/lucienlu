@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, ReactNode, SVGProps } from "react";
+import { FC, ReactNode, SVGProps } from "react";
 
 type SvgSymbol = "React" | "Redux" | "Tailwind" | "Typescript" | "Arrow" | "HardDisk" | "Computer" | "Search" | "Hamburger" | "Minimize";
 

@@ -1,7 +1,7 @@
 import { FC, ReactNode, useRef } from "react";
 import Computer from "./Computer";
 import { useAppDispatch } from "../../store";
-import { selectComputerPage, updateContent, updatePage } from "./computerSlice";
+import { selectComputerPage, updatePage } from "./computerSlice";
 import { backendSectionConfig } from "./config";
 import { useMockRouter } from "./hooks";
 import { useSelector } from "react-redux";

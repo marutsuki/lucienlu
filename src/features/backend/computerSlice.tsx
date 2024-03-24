@@ -15,7 +15,7 @@ const computerSlice = createSlice({
     reducers: {
         updateContent: (state, action: PayloadAction<ReactNode | ReactNode[]>) => ({ ...state, content: action.payload }),
         updateUrl: (state, action: PayloadAction<string>) => ({ ...state, url: action.payload }),
-        updatePage: (state, action: PayloadAction<ComputerContextState>) => action.payload,
+        updatePage: (_, action: PayloadAction<ComputerContextState>) => action.payload,
     }
 });
 
