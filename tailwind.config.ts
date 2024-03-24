@@ -7,20 +7,26 @@ export default {
   ],
   theme: {
     fontFamily: {
-      primary: "'Hedvig Letters Sans', sans-serif"
+      primary: "'Hedvig Letters Sans', sans-serif",
+      code: "'Source Code Pro', monospace",
     },
     extend: {
       backgroundImage: {
         backdrop: "url(backdrop.png)",
+        cdBg: `conic-gradient(from 90deg at 50% 50%, rgba(225,186,255,0.7), rgba(255,255,255,0.85), rgba(255,255,255,0.85), 
+        rgba(174,255,246,1), rgba(255,255,255,0.5), rgba(255,255,255,0.5), rgba(255,255,255,0.85), rgba(255,218,251,1), rgba(255,255,255,0.85), 
+        rgba(244,191,255,0.85), rgba(255,255,255,0.75), rgba(255,255,255,0.85), rgba(251,255,218,1), rgba(255,255,255,0.85), rgba(255,255,255,0.5), rgba(255,255,255,0.5), 
+        rgba(201,255,248,0.85), rgba(255,255,255,0.5), rgba(250,250,250,0.85), rgba(225,186,255,0.7))`
       },
       colors: {
         primary: "#000000",
         accent: "#ffffff",
         background: "#ffffff",
-        textBackground: "rgba(0, 0, 0, 0.5)"
+        textBackground: "rgba(0, 0, 0, 0.5)",
       },
       animation: {
-        overshootSpin: "spin 2.5s cubic-bezier(.7, .1, .55, 1) infinite"
+        overshootSpin: "spin 2.5s cubic-bezier(.7, .1, .55, 1) infinite",
+        blink: "blink 1s linear infinite",
       },
       keyframes: {
         spin: {
@@ -29,6 +35,20 @@ export default {
           },
           "100%": {
             transform: "rotate(360deg)"
+          },
+        },
+        blink: {
+          "0%": {
+            opacity: "100%"
+          },
+          "49%": {
+            opacity: "100%"
+          },
+          "50%": {
+            opacity: "0"
+          },
+          "100%": {
+            opacity: "0"
           },
         },
       },

@@ -6,7 +6,7 @@ import Main from './layouts/Main';
 import { Provider } from 'react-redux';
 import store from './store';
 
-const Delay = ForcedDelay(2000);
+const Delay = ForcedDelay(0);
 function App() {
   return (
     <Provider store={store}>
