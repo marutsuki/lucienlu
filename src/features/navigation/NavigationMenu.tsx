@@ -53,7 +53,7 @@ const NavigationMenu: FC<object> = () => {
     }
 
     return <menu ref={menuRef} style={{
-        top: "4px",
+        top: "200px",
         left: "0px",
     }} className={`${!active ? `before:absolute before:content-[''] before:-top-0 before:w-full before:h-1 before:bg-whiteGradientToRight before:animate-dashRight
     after:absolute after:content-[''] after:-bottom-0 after:w-full after:h-1 after:bg-whiteGradientToLeft after:animate-dashLeft` : ""} overflow-hidden z-10 fixed hover:bg-[rgba(0,0,0,0.5)] bg-[rgba(0,0,0,0.1)] backdrop-blur-md drop-shadow-[0_0_5px_rgba(0,0,0,1)]`}>
