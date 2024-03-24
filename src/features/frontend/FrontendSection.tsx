@@ -1,16 +1,27 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 import ContentWheel from "../../components/ContentWheel";
 import GenericSvg from "../../components/symbols/SvgSymbols";
 import FrontendSkill from "./FrontendSkill";
+import { useSelector } from "react-redux";
+import { selectScrollContext } from "../navigation/scrollSlice";
 
 const FrontendSection: FC<object> = () => {
-    return <section className="relative h-screen grid place-items-center text-xl grid-cols-2 grid-rows-1 overflow-hidden">
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const scrollContext = useSelector(selectScrollContext);
+  
+  if (scrollContext.context === "Frontend") {
+    if (sectionRef.current !== null) {
+        sectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+    return <section ref={sectionRef} className="relative h-screen grid place-items-center text-xl grid-cols-2 grid-rows-1 overflow-hidden">
       <div>
         <h1>What I use</h1>
         <h2 className="font-code text-3xl">frontend<span className="animate-blink">_</span></h2>
       </div>
       <div className="group/frontend-layout absolute right-0
-      before:content-[''] before:w-16 before:z-[100] before:h-full before:right-0 before:absolute before:bg-[linear-gradient(to_right,transparent,black_40%)]">
+      before:content-[''] before:w-16 before:z-10 before:h-full before:right-0 before:absolute before:bg-[linear-gradient(to_right,transparent,rgba(25,25,25,1)_40%)]">
         <div className="font-code absolute text-2xl left-5 top-1/2 animate-bounce">
           Move your cursor here...
         </div>

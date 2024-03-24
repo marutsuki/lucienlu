@@ -3,6 +3,7 @@ import Intro from "../features/intro/Intro";
 import AboutMe from "../features/aboutme/AboutMe";
 import FrontendSection from "../features/frontend/FrontendSection";
 import BackendSection from "../features/backend/BackendSection";
+import NavigationMenu from "../features/navigation/NavigationMenu";
 
 const Main: FC<object> = () => {
     return <main className="text-accent font-primary">
@@ -10,6 +11,7 @@ const Main: FC<object> = () => {
         <AboutMe/>
         <FrontendSection/>
         <BackendSection/>
+        <NavigationMenu/>
     </main>
 }
 
