@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 type ComputerContextState = { id: string, content: ReactNode | ReactNode[], url: string }
 const initialState: ComputerContextState = {
     id: "Home",
-    url: "http://localhost:3000",
+    url: "http://localhost:3000/home",
     content: <><h1>Welcome</h1>Type in an endpoint to read more...</>,
 }
 

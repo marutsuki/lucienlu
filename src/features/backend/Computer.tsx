@@ -9,9 +9,9 @@ type ComputerProps = {
 }
 
 const Computer: FC<ComputerProps> = () => {
-    const [input, setInput] = useState("http://localhost:3000/home");
     const content = useSelector(selectComputerContent);
     const url = useSelector(selectComputerUrl);
+    const [input, setInput] = useState(url);
     const dispatch = useAppDispatch();
     
     useEffect(() => {
