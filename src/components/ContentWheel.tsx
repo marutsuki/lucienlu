@@ -7,7 +7,6 @@ type ContentWheelProps = {
     before?: ReactNode | ReactNode[];
     children: ReactNode[];
     startingRotation?: number;
-    mouseRotateSpeed?: number;
     wheelRotateSpeed?: number;
     showIndicators?: boolean;
 }
@@ -16,7 +15,7 @@ const DEFAULT_ROTATE_SPEED = 2;
 
 const INDICATOR_COUNT_PER_DIRECTION = 5;
 
-const ContentWheel: FC<ContentWheelProps> = ({ className = "", wheelClassName = "", before, children, startingRotation = 0, mouseRotateSpeed = DEFAULT_ROTATE_SPEED, wheelRotateSpeed = DEFAULT_ROTATE_SPEED, showIndicators = false }: ContentWheelProps) => {
+const ContentWheel: FC<ContentWheelProps> = ({ className = "", wheelClassName = "", before, children, startingRotation = 0,wheelRotateSpeed = DEFAULT_ROTATE_SPEED, showIndicators = false }: ContentWheelProps) => {
     const wheelRef = useRef<HTMLDivElement>(null);
     
     // We cannot use React's event listeners for wheels because they are all passive event listeners, meaning we can't call preventDefault().
