@@ -24,7 +24,7 @@ const BackendSection: FC<object> = () => {
         }
     }
 
-    return <section ref={sectionRef} className="relative h-screen grid place-items-center text-xl grid-cols-2 grid-rows-1 overflow-hidden">
+    return <section ref={sectionRef} className="select-none relative h-screen grid place-items-center text-xl grid-cols-2 grid-rows-1 overflow-hidden">
         <div className="flex items-center">
             <Index funcs={backendSectionConfig.map(entry => ({
                 id: entry.label,

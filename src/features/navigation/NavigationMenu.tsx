@@ -42,7 +42,6 @@ const NavigationMenu: FC<object> = () => {
             }
             menuRef.current.style.transitionDuration = "300ms";
             if (e.clientX > window.screen.width / 2) {
-                console.log(menuRef.current.clientWidth);
                 menuRef.current.style.left = document.body.clientWidth - menuRef.current.clientWidth + "px";
             } else {
                 menuRef.current.style.left = "0px";
@@ -82,7 +81,7 @@ const NavigationMenu: FC<object> = () => {
         }
             active={scrollContext.context}
             className={`relative ml-4 my-0 overflow-hidden transition-all duration-300 max-h-96 max-w-full pb-4 ${!active ? "!max-h-0 !max-w-0 !pb-0" : ""}`}
-            itemClassName="relative group m-2 transition-all cursor-pointer
+            itemClassName="relative group m-2 transition-all cursor-pointer select-none
                 before:absolute before:bottom-0 before:content-[''] before:h-1 before:w-0 before:bg-content before:duration-300"
             activeItemClassName="drop-shadow-[0_0_5px_rgba(255,255,255,1)] before:w-full"
         />

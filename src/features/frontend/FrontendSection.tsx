@@ -15,7 +15,7 @@ const FrontendSection: FC<object> = () => {
     }
   }
 
-    return <section ref={sectionRef} className="relative h-screen grid place-items-center text-xl grid-cols-2 grid-rows-1 overflow-hidden">
+    return <section ref={sectionRef} className="select-none relative h-screen grid place-items-center text-xl grid-cols-2 grid-rows-1 overflow-hidden">
       <div>
         <h1>What I use</h1>
         <h2 className="font-code text-3xl">frontend<span className="animate-blink">_</span></h2>

@@ -1,13 +1,19 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../store";
 
+export type LoadingStatus = "NotReady" | "Ready" | "Loaded";
+
+const initialState: {
+    status: LoadingStatus;
+} = {
+    status: "NotReady",
+}
+
 const loadingSlice = createSlice({
     name: "loading",
-    initialState: {
-        status: false,
-    },
+    initialState,
     reducers: {
-        setLoadingStatus: (_, action: PayloadAction<boolean>) => ({ status: action.payload }),
+        setLoadingStatus: (_, action: PayloadAction<LoadingStatus>) => ({ status: action.payload }),
     },
     selectors: {
         selectStatus: (state) => state.status,

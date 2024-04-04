@@ -24,6 +24,7 @@ export default {
       colors: {
         primary: "#191919",
         content: "#ffffff",
+        overlay: "rgba(0,0,0,0.5)",
         accent: "#7c6ec2",
         textBackground: "rgba(0, 0, 0, 0.5)",
       },
