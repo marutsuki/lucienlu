@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../store";
 
-export type ScrollContext = "Intro" | "AboutMe" | "Frontend" | "Backend";
+export type ScrollContext = "Intro" | "AboutMe" | "Frontend" | "Backend" | "Projects";
 
 const initialState: { context: ScrollContext } = {
     context: "Intro"

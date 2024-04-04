@@ -79,7 +79,7 @@ const NavigationMenu: FC<object> = () => {
             active={scrollContext.context}
             className={`ml-4 my-0 overflow-hidden transition-all duration-300 max-h-96 min-w-max ${!active ? "!max-h-0" : ""}`}
             itemClassName="relative group m-2 transition-all cursor-pointer
-                before:absolute before:bottom-0 before:content-[''] before:h-1 before:w-0 before:bg-white before:duration-300"
+                before:absolute before:bottom-0 before:content-[''] before:h-1 before:w-0 before:bg-content before:duration-300"
             activeItemClassName="drop-shadow-[0_0_5px_rgba(255,255,255,1)] before:w-full"
         />
     </menu>

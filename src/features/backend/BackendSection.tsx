@@ -38,7 +38,7 @@ const BackendSection: FC<object> = () => {
                 active={pageId}
                 activeItemClassName="drop-shadow-[0_0_5px_rgba(255,255,255,1)] before:w-full"
                 itemClassName={`hover:bg-gray-700"} relative group p-2 m-2 transition-all cursor-pointer
-                before:absolute before:bottom-0 before:content-[''] before:h-1 before:w-0 before:bg-white before:duration-300`} />
+                before:absolute before:bottom-0 before:content-[''] before:h-1 before:w-0 before:bg-content before:duration-300`} />
             <Computer/>
         </div>
         <div>

@@ -18,12 +18,13 @@ export default {
         rgba(244,191,255,0.85), rgba(255,255,255,0.75), rgba(255,255,255,0.85), rgba(251,255,218,1), rgba(255,255,255,0.85), rgba(255,255,255,0.5), rgba(255,255,255,0.5), 
         rgba(201,255,248,0.85), rgba(255,255,255,0.5), rgba(250,250,250,0.85), rgba(225,186,255,0.7))`,
         whiteGradientToRight: "linear-gradient(to right, transparent, white)",
-        whiteGradientToLeft: "linear-gradient(to left, transparent, white)"
+        whiteGradientToLeft: "linear-gradient(to left, transparent, white)",
+        sunset: "linear-gradient(to bottom right, #EE696B, #523A78)"
       },
       colors: {
-        primary: "#000000",
-        accent: "#ffffff",
-        background: "rgba(25,25,25,1)",
+        primary: "#191919",
+        content: "#ffffff",
+        accent: "#7c6ec2",
         textBackground: "rgba(0, 0, 0, 0.5)",
       },
       animation: {

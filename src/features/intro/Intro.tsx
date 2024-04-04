@@ -19,12 +19,12 @@ const Intro: FC<object> = () => {
     };
 
     return <section ref={sectionRef} className="bg-backdrop h-screen bg-cover grid place-items-center border-black border-[16px]">
-        <div className="absolute h-64 bg-gradient-to-t from-black to-transparent w-full bottom-0 left-0 cursor-pointer" onClick={toNextSection}/>
+        <div className="absolute h-64 bg-gradient-to-t from-primary to-transparent w-full bottom-0 left-0 cursor-pointer" onClick={toNextSection}/>
         <svg className="absolute translate-x-[-50%] bottom-0 left-1/2 animate-bounce pointer-events-none" width="48" height="48" viewBox="0 0 24 24" fill="white"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
         
         <div className="mb-24">
             <h1 className="text-[76px] p-4 [text-shadow:_0_3px_4px_rgb(0_0_0_/_100%)]">
-            Hello, I'm Lucien
+            Hello, I&apos;m Lucien
             </h1>
             <div className="flex flex-row justify-center">
                 <svg className="drop-shadow-lg m-4 cursor-pointer" width="48" height="48" viewBox="0 0 24 24" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>

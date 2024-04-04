@@ -21,5 +21,9 @@ export const navigationConfig: NavigationConfig = [
     {
         label: "What I use (Backend)",
         scrollContext: "Backend"
+    },
+    {
+        label: "Project Showcase",
+        scrollContext: "Projects"
     }
 ]
