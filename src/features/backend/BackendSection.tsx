@@ -24,8 +24,8 @@ const BackendSection: FC<object> = () => {
         }
     }
 
-    return <section ref={sectionRef} className="select-none relative h-screen grid place-items-center text-xl grid-cols-2 grid-rows-1 overflow-hidden">
-        <div className="flex items-center">
+    return <section ref={sectionRef} className="select-none relative h-screen grid place-items-center text-xl grid-cols-1 grid-rows-2 desktop:grid-cols-2 laptop:grid-rows-1 overflow-hidden">
+        <div className="flex items-center desktop:static absolute top-48">
             <Index funcs={backendSectionConfig.map(entry => ({
                 id: entry.label,
                 label: entry.label,
@@ -36,12 +36,13 @@ const BackendSection: FC<object> = () => {
                 })), 
             }))}
                 active={pageId}
+                className="hidden laptop:block"
                 activeItemClassName="drop-shadow-[0_0_5px_rgba(255,255,255,1)] before:w-full"
-                itemClassName={`hover:bg-gray-700"} relative group p-2 m-2 transition-all cursor-pointer
+                itemClassName={`hover:bg-gray-700 relative group p-2 m-2 transition-all cursor-pointer
                 before:absolute before:bottom-0 before:content-[''] before:h-1 before:w-0 before:bg-content before:duration-300`} />
             <Computer/>
         </div>
-        <div>
+        <div className="desktop:static absolute top-8 right-8">
             <h1>What I use</h1>
             <h2 className="font-code text-3xl">backend<span className="animate-blink">_</span></h2>
         </div>

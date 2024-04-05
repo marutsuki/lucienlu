@@ -41,7 +41,7 @@ const NavigationMenu: FC<object> = () => {
                 return;
             }
             menuRef.current.style.transitionDuration = "300ms";
-            if (e.clientX > window.screen.width / 2) {
+            if (window.innerWidth > 1024 && e.clientX > document.body.clientWidth / 2) {
                 menuRef.current.style.left = document.body.clientWidth - menuRef.current.clientWidth + "px";
             } else {
                 menuRef.current.style.left = "0px";

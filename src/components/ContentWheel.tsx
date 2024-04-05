@@ -85,7 +85,7 @@ const ContentWheel: FC<ContentWheelProps> = ({ className = "", wheelClassName = 
                 children.map((child, index) => <div key={index} style={{
                     top: `calc(${Math.round(positions[index].y * 35) + 45}vh)`,
                     left: `calc(${Math.round(positions[index].x * 35) + 45}vh)`,
-                    rotate: `${positions[index].deg + 180}deg`,
+                    rotate: `${positions[index].deg - startingRotation}deg`,
                     translate: "-50% -50%"
                 }} className="absolute">
                     { child }

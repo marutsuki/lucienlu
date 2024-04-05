@@ -18,19 +18,21 @@ const FrontendSection: FC<object> = () => {
   }
 
     return <section ref={sectionRef} className="select-none relative h-screen grid place-items-center text-xl grid-cols-2 grid-rows-1 overflow-hidden">
-      <div>
+      <div className="laptop:static absolute top-8 left-8">
         <h1>What I use</h1>
         <h2 className="font-code text-3xl">frontend<span className="animate-blink">_</span></h2>
       </div>
       <div className="group/frontend-layout absolute right-0
-      before:content-[''] before:w-16 before:z-10 before:h-full before:right-0 before:absolute before:bg-[linear-gradient(to_right,transparent,rgba(25,25,25,1)_40%)]">
-        <div className="font-code absolute text-2xl left-5 top-1/2 animate-bounce">
+        before:w-full before:desktop:w-16 before:z-10 before:bottom-0 before:h-4 before:desktop:h-full before:right-0 before:absolute
+        before:bg-[linear-gradient(to_bottom,transparent,rgba(25,25,25,1)_40%)]
+        before:desktop:bg-[linear-gradient(to_right,transparent,rgba(25,25,25,1)_40%)]">
+        <div className="font-code absolute laptop:text-xl text-xl left-5 top-1/2 animate-bounce">
           Move your cursor here...
         </div>
         { !revisit && <h2 className="animate-bounce group-hover/frontend-layout:opacity-100 opacity-0 duration-300 cursor-pointer font-code absolute z-10 right-[60vh] top-40 bg-overlay shadow-overlay rounded-xl shadow-md p-4"
           onClick={() => setRevisit("true", 24 * 60)}>Click the arrows or use your scroll wheel.<GenericSvg className="inline" size={36} fill="white" symbol="Arrow"/></h2> 
         }
-        <ContentWheel className="absolute right-[-60vh] group-hover/frontend-layout:right-[-40vh] duration-300" 
+        <ContentWheel className="absolute top-[50vh] laptop:top-0 right-[-60vh] desktop:group-hover/frontend-layout:right-[-40vh] duration-300" 
           before={
             <>
               <div className="absolute inset-[30%] bg-black rounded-full"/>
@@ -39,11 +41,10 @@ const FrontendSection: FC<object> = () => {
               <div className="absolute inset-[37%] bg-[rgba(255,255,255,0.8)] rounded-full"/>
               <div className="absolute inset-[40%] bg-black rounded-full"/>
               <div className="absolute inset-0 bg-[rgba(0,0,0,0.1)] rounded-full"/>
-              
             </>
           }
           wheelRotateSpeed={4} 
-          startingRotation={180} 
+          startingRotation={window.screen.width > 1024 ? 180 : 225} 
           showIndicators={true}
           wheelClassName="bg-cdBg"
         >

@@ -24,7 +24,7 @@ const Intro: FC<object> = () => {
         <svg className="absolute translate-x-[-50%] bottom-0 left-1/2 animate-bounce pointer-events-none" width="48" height="48" viewBox="0 0 24 24" fill="white"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
         
         <div className="mb-24">
-            <h1 className="text-[76px] p-4 [text-shadow:_0_3px_4px_rgb(0_0_0_/_100%)]">
+            <h1 className="text-48 laptop:text-[76px] p-4 [text-shadow:_0_3px_4px_rgb(0_0_0_/_100%)]">
             Hello, I&apos;m Lucien
             </h1>
             <div className="flex flex-row justify-center">
