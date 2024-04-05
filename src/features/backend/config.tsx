@@ -37,7 +37,7 @@ export const backendSectionConfig: BackendSectionConfig = [
                 <h1>Express</h1>
                 <p>
                     Express is perfect for writing any backend server, with how
-                    lightweight the framework is, it's my go-to to develop any
+                    lightweight the framework is, it&apos;s my go-to to develop any
                     sort of API.
                 </p>
             </>
@@ -80,7 +80,7 @@ export const backendSectionConfig: BackendSectionConfig = [
             <>
                 <h1>NextJS</h1>
                 <p>
-                    A very opinionated framework, I've had exposure to both the
+                    A very opinionated framework, I&apos;ve had exposure to both the
                     Page and App router while working with server side
                     rendering, mainly through side projects.
                 </p>
@@ -95,7 +95,7 @@ export const backendSectionConfig: BackendSectionConfig = [
                 <h1>Apache Kafka</h1>
                 <p>
                     Kafka is one of the most powerful distributed messaging
-                    systems out there currently. I've been lucky to acquire
+                    systems out there currently. I&apos;ve been lucky to acquire
                     professional exposure to this technology, via Spring Kafka
                     in Java.
                 </p>
