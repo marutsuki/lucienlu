@@ -62,7 +62,7 @@ const NavigationMenu: FC<object> = () => {
     }} className={`z-10 fixed hover:bg-overlay bg-[rgba(0,0,0,0.1)] backdrop-blur-md drop-shadow-[0_0_5px_rgba(0,0,0,1)]`}>
         <div 
             onMouseDown={startDragging} 
-            className="!mb-0 cursor-grab flex flex-row justify-end p-2 backdrop-blur-xl mb-2">
+            className="cursor-grab flex flex-row justify-end p-1 backdrop-blur-xl mb-2 pt-2">
             <div className={`${!active ? "animate-bounce" : ""} cursor-pointer hover:drop-shadow-[0_0_5px_rgba(255,255,255,1)]`} onClick={onOpenCloseMenu}>
             {
                 active 
@@ -80,10 +80,11 @@ const NavigationMenu: FC<object> = () => {
             }))
         }
             active={scrollContext.context}
-            className={`relative ml-4 my-0 overflow-hidden transition-all duration-300 max-h-96 max-w-full pb-4 ${!active ? "!max-h-0 !max-w-0 !pb-0" : ""}`}
-            itemClassName="relative group m-2 transition-all cursor-pointer select-none
-                before:absolute before:bottom-0 before:content-[''] before:h-1 before:w-0 before:bg-content before:duration-300"
-            activeItemClassName="drop-shadow-[0_0_5px_rgba(255,255,255,1)] before:w-full"
+            className={`${!active && "!max-h-0 !max-w-0 !pb-0"} relative ml-4 my-0 mr-2 overflow-hidden transition-all duration-300 max-h-96 max-w-full pb-4 `}
+            itemClassName="relative group p-2 transition-all cursor-pointer select-none hover:scale-105 w-full pr-4
+                after:absolute after:bottom-0 after:left-0 after:content-[''] after:h-1 after:w-0 after:bg-content after:duration-300"
+            activeItemClassName="drop-shadow-[0_0_5px_rgba(255,255,255,1)] after:w-full"
+            itemChildren={<div className="absolute -z-10 inset-0 content-[''] opacity-0 bg-sunset shadow-inner group-hover:opacity-50 duration-300"/>}
         />
         { !revisit && <h2 onClick={() => setRevisit("true", 24 * 60)} 
             className="select-none cursor-pointer bg-overlay shadow-overlay rounded-xl shadow-md 
