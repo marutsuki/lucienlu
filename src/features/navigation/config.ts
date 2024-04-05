@@ -1,29 +1,29 @@
-import { ScrollContext } from "./scrollSlice";
+import { ScrollContext } from "./scrollSlice"
 
 type NavigationConfig = {
-    label: string;
-    scrollContext: ScrollContext;
-}[];
+    label: string
+    scrollContext: ScrollContext
+}[]
 
 export const navigationConfig: NavigationConfig = [
     {
         label: "Home",
-        scrollContext: "Intro"
+        scrollContext: "Intro",
     },
     {
         label: "About Me",
-        scrollContext: "AboutMe"
+        scrollContext: "AboutMe",
     },
     {
         label: "What I use (Frontend)",
-        scrollContext: "Frontend"
+        scrollContext: "Frontend",
     },
     {
         label: "What I use (Backend)",
-        scrollContext: "Backend"
+        scrollContext: "Backend",
     },
     {
         label: "Project Showcase",
-        scrollContext: "Projects"
-    }
+        scrollContext: "Projects",
+    },
 ]
