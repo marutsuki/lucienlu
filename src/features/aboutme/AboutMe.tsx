@@ -16,7 +16,7 @@ const AboutMe: FC<object> = () => {
             className="relative h-screen grid place-items-center grid-cols-1 grid-rows-2 laptop:grid-cols-2 laptop:grid-rows-1"
             ref={sectionRef}
         >
-            <p className="text-base text-left m-8 laptop:max-w-96 leading-loose mb-4">
+            <p className="text-base laptop:text-lg text-left m-8 laptop:max-w-96 leading-loose mb-4">
                 I&apos;m a graduate from the University of Melbourne, passionate
                 about technology and currently working as a full stack developer
                 in Australia.

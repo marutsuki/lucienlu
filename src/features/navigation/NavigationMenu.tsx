@@ -1,4 +1,4 @@
-import { FC, MouseEvent as ReactMouseEvent, useRef, useState } from "react"
+import { FC, MouseEvent as ReactMouseEvent, TouchEvent, useRef, useState, useEffect } from "react"
 import { navigationConfig } from "./config"
 import { useAppDispatch } from "../../store"
 import { selectScrollContext, updateScrollContext } from "./scrollSlice"
@@ -7,9 +7,12 @@ import { useSelector } from "react-redux"
 import GenericSvg from "../../components/symbols/SvgSymbols"
 import { useCookie } from "../../hooks"
 
+const MINIMUM_DISTANCE_BEFORE_DEREGISTERING_CLICK = 50;
+
 const NavigationMenu: FC<object> = () => {
-    const [active, setActive] = useState(true)
-    const menuRef = useRef<HTMLMenuElement>(null)
+    const [active, setActive] = useState(true);
+    const menuRef = useRef<HTMLMenuElement>(null);
+    const openCloseRef = useRef<HTMLDivElement>(null);
     const dispatch = useAppDispatch()
     const scrollContext = useSelector(selectScrollContext)
     const [revisit, setRevisit] = useCookie("revisit")
@@ -22,6 +25,9 @@ const NavigationMenu: FC<object> = () => {
         if (menuRef.current !== null) {
             menuRef.current.style.transitionDuration = ""
         }
+
+        let dragDistance = 0;
+        
         const drag = (e: MouseEvent) => {
             e.preventDefault()
             if (menuRef.current !== null) {
@@ -34,15 +40,27 @@ const NavigationMenu: FC<object> = () => {
                 menuRef.current.style.top =
                     parseInt(menuRef.current.style.top.split("px")[0]) +
                     deltaY +
-                    "px"
+                    "px";
+                dragDistance += Math.sqrt(deltaX**2 + deltaY**2);
             }
             prevX = e.clientX
             prevY = e.clientY
         }
 
+        // Add a click event listener to prevent the minimize/maximize function from being fired.
+        const captureClick = (e: MouseEvent) => {
+            if (menuRef.current === null) {
+                return;
+            }
+            if (dragDistance > MINIMUM_DISTANCE_BEFORE_DEREGISTERING_CLICK) {
+                e.stopPropagation();
+            }
+            window.removeEventListener("click", captureClick, { capture: true });
+        }
+
         const dragFinish = (e: MouseEvent) => {
             window.removeEventListener("mousemove", drag)
-            window.removeEventListener("mouseup", dragFinish)
+            window.removeEventListener("mouseup", dragFinish);
             if (menuRef.current === null) {
                 return
             }
@@ -59,19 +77,30 @@ const NavigationMenu: FC<object> = () => {
                 menuRef.current.style.left = "0px"
             }
         }
+
         window.addEventListener("mousemove", drag)
-        window.addEventListener("mouseup", dragFinish)
+        window.addEventListener("mouseup", dragFinish);
+        window.addEventListener("click", captureClick, { capture: true });
     }
-    const onOpenCloseMenu = (e: ReactMouseEvent<HTMLDivElement>) => {
-        e.stopPropagation()
-        setActive((state) => !state)
-    }
+    // Use native js event listener so that the the drag handler can capture the click event before it reaches here.
+    useEffect(() => {
+        const ref = openCloseRef.current
+        if (ref !== null) {
+            const onOpenCloseMenu = (e: MouseEvent) => {
+                e.stopPropagation();
+                setActive((state) => !state);
+            }
+            ref.addEventListener("click", onOpenCloseMenu);
+            return () => ref.removeEventListener("click", onOpenCloseMenu);
+        }
+    }, []);
+    
 
     return (
         <menu
             ref={menuRef}
             style={{
-                top: "200px",
+                top: window.innerWidth > 1024 ? "200px" : "0px",
                 left: "0px",
             }}
             className={`z-10 fixed hover:bg-overlay bg-[rgba(0,0,0,0.1)] backdrop-blur-md drop-shadow-[0_0_5px_rgba(0,0,0,1)]`}
@@ -81,8 +110,9 @@ const NavigationMenu: FC<object> = () => {
                 className="cursor-grab flex flex-row justify-end p-1 backdrop-blur-xl mb-2 pt-2"
             >
                 <div
+                    ref={openCloseRef}
                     className={`${!active ? "animate-bounce" : ""} cursor-pointer hover:drop-shadow-[0_0_5px_rgba(255,255,255,1)]`}
-                    onClick={onOpenCloseMenu}
+                    
                 >
                     {active ? (
                         <GenericSvg symbol="Minimize" size={24} fill="white" />

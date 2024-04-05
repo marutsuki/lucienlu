@@ -25,10 +25,10 @@ const FrontendSkill: FC<FrontendSkillProps> = ({
                 style={{
                     opacity: active ? "100%" : "0%",
                 }}
-                className="absolute flex flex-col justify-center inset-0 group-focus:opacity-100 cursor-pointer bg-textBackground transition-opacity duration-500 rounded-2xl"
+                className="absolute flex flex-col justify-center p-2 inset-10 laptop:inset-0 group-focus:opacity-100 cursor-pointer bg-textBackground transition-opacity duration-500 rounded-2xl"
             >
-                <h1 className="text-4xl mb-2"> {title} </h1>
-                <p className="text-lg -inset-5"> {description} </p>
+                <h1 className="text-2xl laptop:text-4xl mb-1"> {title} </h1>
+                <p className="text-base laptop:text-lg -inset-5"> {description} </p>
             </div>
         </div>
     )

@@ -28,8 +28,6 @@ const ProjectSection: FC<object> = () => {
     )
     useEffect(() => {
         const el = () => {
-            console.log("reisze")
-            console.log(screen.width)
             setScreenWidth(window.innerWidth)
         }
         window.addEventListener("resize", el)
@@ -46,7 +44,7 @@ const ProjectSection: FC<object> = () => {
             className={`relative laptop:h-screen grid place-items-center text-xl desktop:grid-cols-2 desktop:grid-rows-1 grid-cols-1 grid-rows-auto overflow-hidden`}
         >
             <div>
-                <h1 className="font-code select-none">Project Showcase</h1>
+                <h1 className="font-code select-none text-5xl laptop:text-6xl">Project Showcase</h1>
             </div>
             <div className="laptop:m-8">
                 <GridMap grid={gridLayout}>

@@ -22,8 +22,8 @@ const FrontendSection: FC<object> = () => {
             ref={sectionRef}
             className="select-none relative h-screen grid place-items-center text-xl grid-cols-2 grid-rows-1 overflow-hidden"
         >
-            <div className="laptop:static absolute top-8 left-8">
-                <h1>What I use</h1>
+            <div className="desktop:static absolute top-8 laptop:left-8">
+                <h1 className="text-5xl laptop:text-6xl">What I use</h1>
                 <h2 className="font-code text-3xl">
                     frontend<span className="animate-blink">_</span>
                 </h2>
@@ -82,7 +82,7 @@ const FrontendSection: FC<object> = () => {
                     />
                     <FrontendSkill
                         title="Redux"
-                        description="This is the butter to the bread that is React. I've always loved this central state management library and its great at coordinating data."
+                        description="Butter to the bread that is React. I have extensive experience working with this state management library."
                         content={
                             <GenericSvg
                                 className="group-hover:fill-[rgba(50,255,255,1)] duration-300"
@@ -106,7 +106,7 @@ const FrontendSection: FC<object> = () => {
                     />
                     <FrontendSkill
                         title="Typescript"
-                        description="Typescript has to be the greatest invention when it comes to web development, it gives me confidence in what I code."
+                        description="My main programming language, it gives me confidence in my code through its powerful typing system."
                         content={
                             <GenericSvg
                                 className="group-hover:fill-[rgba(100,244,255,1)] duration-300"

@@ -56,13 +56,13 @@ const Computer: FC<ComputerProps> = ({ className, ...props }) => {
                 />
                 <input
                     ref={searchRef}
-                    className="border-none bg-transparent relative w-full focus:outline-none mr-2 laptop:mr-8 text-base"
+                    className="border-none bg-transparent relative w-full focus:outline-none mr-2 laptop:mr-8 text-base laptop:text-lg"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={search}
                 />
             </div>
-            <div className="font-code flex-col text-base p-8 overflow-y-auto [&>h1]:text-2xl">
+            <div className="font-code flex-col text-base laptop:text-lg p-8 overflow-y-auto [&>h1]:text-2xl laptop:[&>h1]:text-3xl">
                 {content}
             </div>
         </div>

@@ -51,13 +51,16 @@ const BackendSection: FC<object> = () => {
                     active={pageId}
                     className="hidden laptop:block"
                     activeItemClassName="drop-shadow-[0_0_5px_rgba(255,255,255,1)] before:w-full"
-                    itemClassName={`hover:bg-gray-700 relative group p-2 m-2 transition-all cursor-pointer
-                before:absolute before:bottom-0 before:content-[''] before:h-1 before:w-0 before:bg-content before:duration-300`}
+                    itemClassName={`hover:bg- relative group p-2 m-2 transition-all cursor-pointer
+                    before:absolute before:bottom-0 before:left-0 before:content-[''] before:h-1 before:w-0 before:bg-content before:duration-300`}
+                    itemChildren={
+                        <div className="absolute -z-10 inset-0 content-[''] opacity-0 bg-sunset shadow-inner group-hover:opacity-50 duration-300" />
+                    }
                 />
                 <Computer />
             </div>
-            <div className="desktop:static absolute top-8 right-8">
-                <h1>What I use</h1>
+            <div className="desktop:static absolute top-8 laptop:right-8">
+                <h1 className="text-5xl laptop:text-6xl">What I use</h1>
                 <h2 className="font-code text-3xl">
                     backend<span className="animate-blink">_</span>
                 </h2>
