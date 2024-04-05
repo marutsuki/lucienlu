@@ -1,7 +1,6 @@
 import {
     FC,
     MouseEvent as ReactMouseEvent,
-    TouchEvent,
     useRef,
     useState,
     useEffect,
