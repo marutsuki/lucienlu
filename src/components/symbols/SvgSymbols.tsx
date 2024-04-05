@@ -1,4 +1,4 @@
-import { FC, HTMLProps, ReactNode, SVGProps } from "react"
+import { FC, HTMLProps, ReactNode, SVGProps } from "react";
 
 type SvgSymbol =
     | "GitHub"
@@ -15,7 +15,7 @@ type SvgSymbol =
     | "Minimize"
     | "Link"
     | "Git"
-    | "DownArrow"
+    | "DownArrow";
 
 const svgSymbols: Record<SvgSymbol, ReactNode> = {
     GitHub: (
@@ -65,8 +65,10 @@ const svgSymbols: Record<SvgSymbol, ReactNode> = {
     Git: (
         <path d="M23.548 10.931l-10.479-10.478c-.302-.302-.698-.453-1.093-.453-.396 0-.791.151-1.093.453l-2.176 2.176 2.76 2.76c.642-.216 1.377-.071 1.889.44.513.515.658 1.256.435 1.9l2.66 2.66c.644-.222 1.387-.078 1.901.437.718.718.718 1.881 0 2.6-.719.719-1.883.719-2.602 0-.54-.541-.674-1.334-.4-2l-2.481-2.481v6.529c.175.087.34.202.487.348.717.717.717 1.881 0 2.601-.719.718-1.884.718-2.601 0-.719-.72-.719-1.884 0-2.601.177-.178.383-.312.602-.402v-6.589c-.219-.089-.425-.223-.602-.401-.544-.544-.676-1.343-.396-2.011l-2.721-2.721-7.185 7.185c-.302.302-.453.697-.453 1.093 0 .395.151.791.453 1.093l10.479 10.478c.302.302.697.452 1.092.452.396 0 .791-.15 1.093-.452l10.431-10.428c.302-.303.452-.699.452-1.094 0-.396-.15-.791-.452-1.093" />
     ),
-    DownArrow: <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
-}
+    DownArrow: (
+        <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
+    ),
+};
 
 const defaultProps: Record<SvgSymbol, SVGProps<SVGSVGElement>> = {
     GitHub: {
@@ -121,18 +123,18 @@ const defaultProps: Record<SvgSymbol, SVGProps<SVGSVGElement>> = {
     },
     DownArrow: {
         viewBox: "0 0 24 24",
-    }
-}
+    },
+};
 type GenericSvgProps = {
-    symbol: SvgSymbol
-    size: number
-    fill?: string
-    stroke?: string
-    viewBox?: string
-    className?: string
-    style?: React.CSSProperties
-    children?: ReactNode | ReactNode[]
-} & HTMLProps<SVGSVGElement>
+    symbol: SvgSymbol;
+    size: number;
+    fill?: string;
+    stroke?: string;
+    viewBox?: string;
+    className?: string;
+    style?: React.CSSProperties;
+    children?: ReactNode | ReactNode[];
+} & HTMLProps<SVGSVGElement>;
 
 const GenericSvg: FC<GenericSvgProps> = ({
     symbol,
@@ -145,7 +147,7 @@ const GenericSvg: FC<GenericSvgProps> = ({
     children,
     ...props
 }: GenericSvgProps) => {
-    const path = svgSymbols[symbol]
+    const path = svgSymbols[symbol];
     return (
         <svg
             style={style}
@@ -164,7 +166,7 @@ const GenericSvg: FC<GenericSvgProps> = ({
             {path}
             {children}
         </svg>
-    )
-}
+    );
+};
 
-export default GenericSvg
+export default GenericSvg;

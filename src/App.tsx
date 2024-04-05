@@ -1,8 +1,8 @@
-import "./App.css"
-import Main from "./layouts/Main"
-import { Provider } from "react-redux"
-import store from "./store"
-import LoadingWrapper from "./features/loading/LoadingWrapper"
+import "./App.css";
+import Main from "./layouts/Main";
+import { Provider } from "react-redux";
+import store from "./store";
+import LoadingWrapper from "./features/loading/LoadingWrapper";
 
 function App() {
     return (
@@ -11,7 +11,7 @@ function App() {
                 <Main />
             </LoadingWrapper>
         </Provider>
-    )
+    );
 }
 
-export default App
+export default App;

@@ -1,7 +1,7 @@
-import { ReactNode } from "react"
-import { useSelector } from "react-redux"
-import { selectComputerUrl, updateContent } from "./computerSlice"
-import { useAppDispatch } from "../../store"
+import { ReactNode } from "react";
+import { useSelector } from "react-redux";
+import { selectComputerUrl, updateContent } from "./computerSlice";
+import { useAppDispatch } from "../../store";
 
 export const useMockRouter = (
     endpoints: Record<string, ReactNode | ReactNode[]>,
@@ -12,17 +12,17 @@ export const useMockRouter = (
         </>
     )
 ) => {
-    const url = useSelector(selectComputerUrl)
-    const dispatch = useAppDispatch()
+    const url = useSelector(selectComputerUrl);
+    const dispatch = useAppDispatch();
     if (url in endpoints) {
-        dispatch(updateContent(endpoints[url]))
+        dispatch(updateContent(endpoints[url]));
     } else if (
         url.charAt(url.length - 1) === "/" &&
         url.slice(0, url.length - 1) in endpoints
     ) {
-        dispatch(updateContent(endpoints[url.charAt(url.length - 1)]))
+        dispatch(updateContent(endpoints[url.charAt(url.length - 1)]));
     } else {
-        dispatch(updateContent(defaultContent))
+        dispatch(updateContent(defaultContent));
     }
-    return
-}
+    return;
+};

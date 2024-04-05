@@ -8,7 +8,12 @@ module.exports = {
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
     ],
-    ignorePatterns: ["dist", ".eslintrc.cjs", "postcss.config.js"],
+    ignorePatterns: [
+        "dist",
+        ".eslintrc.cjs",
+        "postcss.config.js",
+        "prettier.config.js",
+    ],
     parser: "@typescript-eslint/parser",
     plugins: ["react", "react-refresh"],
     rules: {
@@ -23,4 +28,4 @@ module.exports = {
         project: ["./tsconfig.json", "./tsconfig.node.json"],
         tsconfigRootDir: __dirname,
     },
-}
+};

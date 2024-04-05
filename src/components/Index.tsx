@@ -1,13 +1,13 @@
-import { FC, HTMLProps, ReactNode } from "react"
+import { FC, HTMLProps, ReactNode } from "react";
 
 type IndexProps = {
-    funcs: { id: string; label: string; func: () => void }[]
-    itemClassName?: string
-    activeItemClassName?: string
-    onClick?: (label: string) => void
-    itemChildren?: ReactNode | ReactNode[]
-    active?: string
-} & HTMLProps<HTMLUListElement>
+    funcs: { id: string; label: string; func: () => void }[];
+    itemClassName?: string;
+    activeItemClassName?: string;
+    onClick?: (label: string) => void;
+    itemChildren?: ReactNode | ReactNode[];
+    active?: string;
+} & HTMLProps<HTMLUListElement>;
 
 const Index: FC<IndexProps> = ({
     funcs,
@@ -20,9 +20,9 @@ const Index: FC<IndexProps> = ({
     ...props
 }: IndexProps) => {
     const onClickWrapper = (label: string, func: () => void) => {
-        if (onClick) onClick(label)
-        func()
-    }
+        if (onClick) onClick(label);
+        func();
+    };
     return (
         <ul
             className={`${className} m-8 flex-col text-left leading-9`}
@@ -39,7 +39,7 @@ const Index: FC<IndexProps> = ({
                 </li>
             ))}
         </ul>
-    )
-}
+    );
+};
 
-export default Index
+export default Index;

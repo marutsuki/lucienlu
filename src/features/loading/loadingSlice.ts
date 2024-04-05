@@ -1,13 +1,13 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit"
-import { RootState } from "../../store"
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../store";
 
-export type LoadingStatus = "NotReady" | "Ready" | "Loaded"
+export type LoadingStatus = "NotReady" | "Ready" | "Loaded";
 
 const initialState: {
-    status: LoadingStatus
+    status: LoadingStatus;
 } = {
     status: "NotReady",
-}
+};
 
 const loadingSlice = createSlice({
     name: "loading",
@@ -20,11 +20,11 @@ const loadingSlice = createSlice({
     selectors: {
         selectStatus: (state) => state.status,
     },
-})
+});
 
-export const loadingReducer = loadingSlice.reducer
+export const loadingReducer = loadingSlice.reducer;
 
 export const selectLoadingStatus = (state: RootState) =>
-    state.loadingReducer.status
+    state.loadingReducer.status;
 
-export const { setLoadingStatus } = loadingSlice.actions
+export const { setLoadingStatus } = loadingSlice.actions;

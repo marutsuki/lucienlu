@@ -1,14 +1,14 @@
 type RepoConfig = {
-    title: string
-    description: string
-    url: string
-    preview?: string
-}
+    title: string;
+    description: string;
+    url: string;
+    preview?: string;
+};
 
 type RepoSectionConfig = {
-    username: string
-    repos: RepoConfig[]
-}
+    username: string;
+    repos: RepoConfig[];
+};
 
 export const repoConfig: RepoSectionConfig = {
     username: "marutsuki",
@@ -52,4 +52,4 @@ export const repoConfig: RepoSectionConfig = {
             url: "https://github.com/marutsuki/HTTP-1.0-server-in-C/",
         },
     ],
-}
+};

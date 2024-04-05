@@ -1,5 +1,5 @@
-import { Config } from "tailwindcss"
-import plugin from "tailwindcss/plugin"
+import { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
@@ -93,7 +93,7 @@ export default {
                     }),
                 },
                 { values: theme("transitionDelay") }
-            )
+            );
         }),
     ],
-} as Config
+} as Config;

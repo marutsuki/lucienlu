@@ -1,10 +1,10 @@
-import { ReactNode } from "react"
+import { ReactNode } from "react";
 
 type BackendSectionConfig = {
-    label: string
-    url: string
-    content: ReactNode | ReactNode[]
-}[]
+    label: string;
+    url: string;
+    content: ReactNode | ReactNode[];
+}[];
 
 export const backendSectionConfig: BackendSectionConfig = [
     {
@@ -37,8 +37,8 @@ export const backendSectionConfig: BackendSectionConfig = [
                 <h1>Express</h1>
                 <p>
                     Express is perfect for writing any backend server, with how
-                    lightweight the framework is, it&apos;s my go-to to develop any
-                    sort of API.
+                    lightweight the framework is, it&apos;s my go-to to develop
+                    any sort of API.
                 </p>
             </>
         ),
@@ -80,8 +80,8 @@ export const backendSectionConfig: BackendSectionConfig = [
             <>
                 <h1>NextJS</h1>
                 <p>
-                    A very opinionated framework, I&apos;ve had exposure to both the
-                    Page and App router while working with server side
+                    A very opinionated framework, I&apos;ve had exposure to both
+                    the Page and App router while working with server side
                     rendering, mainly through side projects.
                 </p>
             </>
@@ -102,4 +102,4 @@ export const backendSectionConfig: BackendSectionConfig = [
             </>
         ),
     },
-]
+];

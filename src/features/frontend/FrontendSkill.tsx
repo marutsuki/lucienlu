@@ -1,11 +1,11 @@
-import { FC, ReactNode, useState } from "react"
+import { FC, ReactNode, useState } from "react";
 
 type FrontendSkillProps = {
-    content: ReactNode | ReactNode[]
-    title: string
-    description: string
-    className?: string
-}
+    content: ReactNode | ReactNode[];
+    title: string;
+    description: string;
+    className?: string;
+};
 
 const FrontendSkill: FC<FrontendSkillProps> = ({
     content,
@@ -13,7 +13,7 @@ const FrontendSkill: FC<FrontendSkillProps> = ({
     description,
     className = "",
 }) => {
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState(false);
 
     return (
         <div
@@ -25,13 +25,15 @@ const FrontendSkill: FC<FrontendSkillProps> = ({
                 style={{
                     opacity: active ? "100%" : "0%",
                 }}
-                className="absolute flex flex-col justify-center p-2 inset-10 laptop:inset-0 group-focus:opacity-100 cursor-pointer bg-textBackground transition-opacity duration-500 rounded-2xl"
+                className="absolute inset-10 flex cursor-pointer flex-col justify-center rounded-2xl bg-textBackground p-2 transition-opacity duration-500 group-focus:opacity-100 laptop:inset-0"
             >
-                <h1 className="text-2xl laptop:text-4xl mb-1"> {title} </h1>
-                <p className="text-base laptop:text-lg -inset-5"> {description} </p>
+                <h1 className="mb-1 text-2xl laptop:text-4xl">{title}</h1>
+                <p className="-inset-5 text-base laptop:text-lg">
+                    {description}
+                </p>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default FrontendSkill
+export default FrontendSkill;

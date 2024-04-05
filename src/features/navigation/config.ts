@@ -1,9 +1,9 @@
-import { ScrollContext } from "./scrollSlice"
+import { ScrollContext } from "./scrollSlice";
 
 type NavigationConfig = {
-    label: string
-    scrollContext: ScrollContext
-}[]
+    label: string;
+    scrollContext: ScrollContext;
+}[];
 
 export const navigationConfig: NavigationConfig = [
     {
@@ -26,4 +26,4 @@ export const navigationConfig: NavigationConfig = [
         label: "Project Showcase",
         scrollContext: "Projects",
     },
-]
+];

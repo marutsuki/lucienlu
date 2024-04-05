@@ -1,13 +1,13 @@
-import { FC, ReactNode } from "react"
+import { FC, ReactNode } from "react";
 
 type GridMapProps = {
-    grid: string[][]
-    children?: ReactNode
-}
+    grid: string[][];
+    children?: ReactNode;
+};
 const GridMap: FC<GridMapProps> = ({ grid, children }: GridMapProps) => {
     return (
         <div
-            className="grid auto-rows-max auto-cols-fr"
+            className="grid auto-cols-fr auto-rows-max"
             style={{
                 gridTemplateAreas: grid
                     .map((row) => "'" + row.join(" ") + "'")
@@ -16,7 +16,7 @@ const GridMap: FC<GridMapProps> = ({ grid, children }: GridMapProps) => {
         >
             {children}
         </div>
-    )
-}
+    );
+};
 
-export default GridMap
+export default GridMap;

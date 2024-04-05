@@ -1,12 +1,12 @@
-import { FC } from "react"
+import { FC } from "react";
 
-const spinnerCss = "absolute animate-overshootSpin w-48"
+const spinnerCss = "absolute animate-overshootSpin w-48";
 
 const Spinner: FC<object> = () => {
     return (
-        <span className="block w-48 h-48 transition-opacity duration-500">
+        <span className="block h-48 w-48 transition-opacity duration-500">
             <img
-                className={spinnerCss.concat(" animate-delay-0 blur-md")}
+                className={spinnerCss.concat(" blur-md animate-delay-0")}
                 src="/spinner.png"
             />
             <img
@@ -15,30 +15,30 @@ const Spinner: FC<object> = () => {
             />
             <img
                 className={spinnerCss.concat(
-                    " animate-delay-[50ms] opacity-80"
+                    " opacity-80 animate-delay-[50ms]"
                 )}
                 src="/spinner.png"
             />
             <img
                 className={spinnerCss.concat(
-                    " animate-delay-[100ms] opacity-60"
+                    " opacity-60 animate-delay-[100ms]"
                 )}
                 src="/spinner.png"
             />
             <img
                 className={spinnerCss.concat(
-                    " animate-delay-[150ms] opacity-40"
+                    " opacity-40 animate-delay-[150ms]"
                 )}
                 src="/spinner.png"
             />
             <img
                 className={spinnerCss.concat(
-                    " animate-delay-[200ms] opacity-20"
+                    " opacity-20 animate-delay-[200ms]"
                 )}
                 src="/spinner.png"
             />
         </span>
-    )
-}
+    );
+};
 
-export default Spinner
+export default Spinner;

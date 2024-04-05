@@ -1,12 +1,12 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit"
-import { RootState } from "../../store"
-import { ReactNode } from "react"
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../store";
+import { ReactNode } from "react";
 
 type ComputerContextState = {
-    id: string
-    content: ReactNode | ReactNode[]
-    url: string
-}
+    id: string;
+    content: ReactNode | ReactNode[];
+    url: string;
+};
 const initialState: ComputerContextState = {
     id: "Home",
     url: "http://localhost:3000/home",
@@ -15,7 +15,7 @@ const initialState: ComputerContextState = {
             <h1>Welcome</h1>Type in an endpoint to read more...
         </>
     ),
-}
+};
 
 const computerSlice = createSlice({
     name: "computerContext",
@@ -35,12 +35,14 @@ const computerSlice = createSlice({
         updatePage: (_, action: PayloadAction<ComputerContextState>) =>
             action.payload,
     },
-})
+});
 
-export const computerReducer = computerSlice.reducer
+export const computerReducer = computerSlice.reducer;
 
-export const selectComputerUrl = (state: RootState) => state.computerReducer.url
+export const selectComputerUrl = (state: RootState) =>
+    state.computerReducer.url;
 export const selectComputerContent = (state: RootState) =>
-    state.computerReducer.content
-export const selectComputerPage = (state: RootState) => state.computerReducer.id
-export const { updateContent, updateUrl, updatePage } = computerSlice.actions
+    state.computerReducer.content;
+export const selectComputerPage = (state: RootState) =>
+    state.computerReducer.id;
+export const { updateContent, updateUrl, updatePage } = computerSlice.actions;

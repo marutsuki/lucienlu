@@ -1,14 +1,14 @@
-import { FC } from "react"
-import Intro from "../features/intro/Intro"
-import AboutMe from "../features/aboutme/AboutMe"
-import FrontendSection from "../features/frontend/FrontendSection"
-import BackendSection from "../features/backend/BackendSection"
-import NavigationMenu from "../features/navigation/NavigationMenu"
-import ProjectSection from "../features/projects/ProjectSection"
+import { FC } from "react";
+import Intro from "../features/intro/Intro";
+import AboutMe from "../features/aboutme/AboutMe";
+import FrontendSection from "../features/frontend/FrontendSection";
+import BackendSection from "../features/backend/BackendSection";
+import NavigationMenu from "../features/navigation/NavigationMenu";
+import ProjectSection from "../features/projects/ProjectSection";
 
 const Main: FC<object> = () => {
     return (
-        <main className="text-content font-primary">
+        <main className="font-primary text-content">
             <Intro />
             <AboutMe />
             <FrontendSection />
@@ -16,7 +16,7 @@ const Main: FC<object> = () => {
             <NavigationMenu />
             <ProjectSection />
         </main>
-    )
-}
+    );
+};
 
-export default Main
+export default Main;

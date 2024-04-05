@@ -1,42 +1,47 @@
-import { FC, useRef } from "react"
-import { useAppDispatch } from "../../store"
+import { FC, useRef } from "react";
+import { useAppDispatch } from "../../store";
 import {
     selectScrollContext,
     updateScrollContext,
-} from "../navigation/scrollSlice"
-import { useSelector } from "react-redux"
-import GenericSvg from "../../components/symbols/SvgSymbols"
+} from "../navigation/scrollSlice";
+import { useSelector } from "react-redux";
+import GenericSvg from "../../components/symbols/SvgSymbols";
 
 const Intro: FC<object> = () => {
-    const dispatch = useAppDispatch()
-    const sectionRef = useRef<HTMLDivElement>(null)
-    const scrollContext = useSelector(selectScrollContext)
+    const dispatch = useAppDispatch();
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const scrollContext = useSelector(selectScrollContext);
 
     if (scrollContext.context === "Intro") {
         if (sectionRef.current !== null) {
-            sectionRef.current.scrollIntoView({ behavior: "smooth" })
+            sectionRef.current.scrollIntoView({ behavior: "smooth" });
         }
     }
 
     const toNextSection = () => {
-        dispatch(updateScrollContext("AboutMe"))
-    }
+        dispatch(updateScrollContext("AboutMe"));
+    };
 
     return (
         <section
             ref={sectionRef}
-            className="select-none bg-backdrop h-screen bg-cover grid place-items-center border-black border-[16px]"
+            className="grid h-screen select-none place-items-center border-[16px] border-black bg-backdrop bg-cover"
         >
             <div
-                className="absolute h-64 bg-gradient-to-t from-primary to-transparent w-full bottom-0 left-0 cursor-pointer"
+                className="absolute bottom-0 left-0 h-64 w-full cursor-pointer bg-gradient-to-t from-primary to-transparent"
                 onClick={toNextSection}
             />
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none">
-                <GenericSvg className="animate-bounce" symbol="DownArrow" size={48} fill="white"/>
+            <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2">
+                <GenericSvg
+                    className="animate-bounce"
+                    symbol="DownArrow"
+                    size={48}
+                    fill="white"
+                />
             </div>
 
             <div className="mb-24">
-                <h1 className="text-48 laptop:text-[76px] p-4 [text-shadow:_0_3px_4px_rgb(0_0_0_/_100%)]">
+                <h1 className="text-48 p-4 [text-shadow:_0_3px_4px_rgb(0_0_0_/_100%)] laptop:text-[76px]">
                     Hello, I&apos;m Lucien
                 </h1>
                 <div className="flex flex-row justify-center">
@@ -65,7 +70,7 @@ const Intro: FC<object> = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Intro
+export default Intro;
