@@ -5,6 +5,7 @@ import FrontendSkill from "./FrontendSkill";
 import { useSelector } from "react-redux";
 import { selectScrollContext } from "../navigation/scrollSlice";
 import { useCookie } from "../../hooks";
+import { isMobile } from "../../util/screen";
 
 const FrontendSection: FC<object> = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -20,7 +21,7 @@ const FrontendSection: FC<object> = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative grid h-screen select-none grid-cols-2 grid-rows-1 place-items-center overflow-hidden text-xl"
+            className="relative grid h-screen select-none grid-cols-2 grid-rows-1 place-items-center overflow-hidden text-xl my-4"
         >
             <div className="absolute top-8 laptop:left-8 desktop:static">
                 <h1 className="text-5xl laptop:text-6xl">What I use</h1>
@@ -34,7 +35,7 @@ const FrontendSection: FC<object> = () => {
         before:desktop:w-16
         before:desktop:bg-[linear-gradient(to_right,transparent,rgba(25,25,25,1)_40%)]"
             >
-                <div className="absolute left-5 top-1/2 animate-bounce font-code text-xl laptop:text-xl">
+                <div className="absolute left-5 top-1/2 animate-bounce font-code text-xl hidden laptop:block laptop:text-xl">
                     Move your cursor here...
                 </div>
                 {!revisit && (
@@ -52,7 +53,7 @@ const FrontendSection: FC<object> = () => {
                     </h2>
                 )}
                 <ContentWheel
-                    className="absolute right-[-60vh] top-[50vh] duration-300 laptop:top-0 desktop:group-hover/frontend-layout:right-[-40vh]"
+                    className="absolute right-[-60vh] top-[50vh] duration-300 laptop:top-0 laptop:group-hover/frontend-layout:right-[-40vh]"
                     before={
                         <>
                             <div className="absolute inset-[30%] rounded-full bg-black" />
@@ -64,7 +65,7 @@ const FrontendSection: FC<object> = () => {
                         </>
                     }
                     wheelRotateSpeed={4}
-                    startingRotation={window.screen.width > 1024 ? 180 : 225}
+                    startingRotation={!isMobile() ? 180 : 225}
                     showIndicators={true}
                     wheelClassName="bg-cdBg"
                 >

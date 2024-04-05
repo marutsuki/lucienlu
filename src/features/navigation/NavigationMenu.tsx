@@ -12,6 +12,7 @@ import Index from "../../components/Index";
 import { useSelector } from "react-redux";
 import GenericSvg from "../../components/symbols/SvgSymbols";
 import { useCookie } from "../../hooks";
+import { isMobile } from "../../util/screen";
 
 const MINIMUM_DISTANCE_BEFORE_DEREGISTERING_CLICK = 50;
 
@@ -74,7 +75,7 @@ const NavigationMenu: FC<object> = () => {
             }
             menuRef.current.style.transitionDuration = "300ms";
             if (
-                window.innerWidth > 1024 &&
+                !isMobile() &&
                 e.clientX > document.body.clientWidth / 2
             ) {
                 menuRef.current.style.left =
@@ -107,7 +108,7 @@ const NavigationMenu: FC<object> = () => {
         <menu
             ref={menuRef}
             style={{
-                top: window.innerWidth > 1024 ? "200px" : "0px",
+                top: !isMobile() ? "200px" : "0px",
                 left: "0px",
             }}
             className={`fixed z-10 bg-[rgba(0,0,0,0.1)] drop-shadow-[0_0_5px_rgba(0,0,0,1)] backdrop-blur-md hover:bg-overlay`}
@@ -148,7 +149,7 @@ const NavigationMenu: FC<object> = () => {
                     <div className="absolute inset-0 -z-10 bg-sunset opacity-0 shadow-inner duration-300 content-[''] group-hover:opacity-50" />
                 }
             />
-            {!revisit && (
+            {!revisit && !isMobile() && (
                 <h2
                     onClick={() => setRevisit("true", 24 * 60)}
                     className="fixed inset-y-0 left-full ml-4 h-min w-max 
