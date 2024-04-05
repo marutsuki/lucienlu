@@ -27,4 +27,4 @@ const getCookie = (name: string): string | null => {
       }
     }
     return null;
-  }
+}

@@ -4,11 +4,13 @@ import GenericSvg from "../../components/symbols/SvgSymbols";
 import FrontendSkill from "./FrontendSkill";
 import { useSelector } from "react-redux";
 import { selectScrollContext } from "../navigation/scrollSlice";
+import { useCookie } from "../../hooks";
 
 const FrontendSection: FC<object> = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const scrollContext = useSelector(selectScrollContext);
-  
+  const [revisit, setRevisit] = useCookie("revisit-frontend");
+
   if (scrollContext.context === "Frontend") {
     if (sectionRef.current !== null) {
         sectionRef.current.scrollIntoView({ behavior: "smooth" });
@@ -25,6 +27,9 @@ const FrontendSection: FC<object> = () => {
         <div className="font-code absolute text-2xl left-5 top-1/2 animate-bounce">
           Move your cursor here...
         </div>
+        { !revisit && <h2 className="animate-bounce group-hover/frontend-layout:opacity-100 opacity-0 duration-300 cursor-pointer font-code absolute z-10 right-[60vh] top-40 bg-overlay shadow-overlay rounded-xl shadow-md p-4"
+          onClick={() => setRevisit("true", 24 * 60)}>Click the arrows or use your scroll wheel.<GenericSvg className="inline" size={36} fill="white" symbol="Arrow"/></h2> 
+        }
         <ContentWheel className="absolute right-[-60vh] group-hover/frontend-layout:right-[-40vh] duration-300" 
           before={
             <>

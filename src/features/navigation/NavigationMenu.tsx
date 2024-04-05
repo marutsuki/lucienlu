@@ -5,7 +5,7 @@ import { selectScrollContext, updateScrollContext } from "./scrollSlice";
 import Index from "../../components/Index";
 import { useSelector } from "react-redux";
 import GenericSvg from "../../components/symbols/SvgSymbols";
-import { useCookie } from "./hooks";
+import { useCookie } from "../../hooks";
 
 const NavigationMenu: FC<object> = () => {
     const [active, setActive] = useState(true);
