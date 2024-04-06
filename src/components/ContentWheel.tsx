@@ -120,11 +120,11 @@ const ContentWheel: FC<ContentWheelProps> = ({
                             .map((_, index) => (
                                 <GenericSvg
                                     style={{
-                                        top: `${-Math.sin(((160 - 5 * index) * Math.PI) / 180) * 50 + 45}vh`,
-                                        left: `${Math.cos(((160 - 5 * index) * Math.PI) / 180) * 50 + 45}vh`,
+                                        top: `${-Math.sin(((160 - 5 * index) * Math.PI) / 180) * 51 + 45}vh`,
+                                        left: `${Math.cos(((160 - 5 * index) * Math.PI) / 180) * 51 + 45}vh`,
                                         rotate: `-${70 - 5 * index}deg`,
                                     }}
-                                    className="absolute duration-300 group-hover:scale-125 group-hover:drop-shadow-[0_0px_35px_rgba(255,255,225,1)] group-active:fill-cyan-200 group-active:drop-shadow-[0_0px_35px_rgba(200,200,225,1)]"
+                                    className="absolute duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0px_35px_rgba(255,255,225,1)] group-active:fill-cyan-200 group-active:drop-shadow-[0_0px_35px_rgba(200,200,225,1)]"
                                     key={`ind-up-${index}`}
                                     symbol="Arrow"
                                     size={36}
@@ -138,12 +138,12 @@ const ContentWheel: FC<ContentWheelProps> = ({
                             .map((_, index) => (
                                 <GenericSvg
                                     style={{
-                                        top: `${-Math.sin(((200 + 5 * index) * Math.PI) / 180) * 48 + 45}vh`,
-                                        left: `${Math.cos(((200 + 5 * index) * Math.PI) / 180) * 48 + 45}vh`,
+                                        top: `${-Math.sin(((200 + 5 * index) * Math.PI) / 180) * 51 + 45}vh`,
+                                        left: `${Math.cos(((200 + 5 * index) * Math.PI) / 180) * 51 + 45}vh`,
                                         rotate: `${70 - 5 * index}deg`,
                                         translate: "0 150%",
                                     }}
-                                    className="absolute duration-300 group-hover:scale-125 group-hover:drop-shadow-[0_0px_35px_rgba(255,255,225,1)] group-active:fill-cyan-200 group-active:drop-shadow-[0_0px_35px_rgba(200,200,225,1)]"
+                                    className="absolute duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0px_35px_rgba(255,255,225,1)] group-active:fill-cyan-200 group-active:drop-shadow-[0_0px_35px_rgba(200,200,225,1)]"
                                     key={`ind-up-${index}`}
                                     symbol="Arrow"
                                     size={36}
