@@ -43,7 +43,7 @@ const ProjectSection: FC<object> = () => {
     return (
         <section
             ref={sectionRef}
-            className={`grid-rows-auto relative grid grid-cols-1 place-items-center overflow-hidden text-xl laptop:h-screen desktop:grid-cols-2 desktop:grid-rows-1 my-4`}
+            className={`grid-rows-auto relative my-4 grid grid-cols-1 place-items-center overflow-hidden text-xl laptop:h-screen desktop:grid-cols-2 desktop:grid-rows-1`}
         >
             <div>
                 <h1 className="select-none font-code text-5xl laptop:text-6xl">

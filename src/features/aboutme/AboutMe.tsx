@@ -13,7 +13,7 @@ const AboutMe: FC<object> = () => {
     }
     return (
         <section
-            className="relative grid h-screen grid-cols-1 grid-rows-2 place-items-center laptop:grid-cols-2 laptop:grid-rows-1 my-4"
+            className="relative my-4 grid h-screen grid-cols-1 grid-rows-2 place-items-center laptop:grid-cols-2 laptop:grid-rows-1"
             ref={sectionRef}
         >
             <p className="m-8 mb-4 text-left text-base leading-loose laptop:max-w-96 laptop:text-lg">

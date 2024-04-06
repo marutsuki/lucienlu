@@ -21,7 +21,7 @@ const FrontendSection: FC<object> = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative grid h-screen select-none grid-cols-2 grid-rows-1 place-items-center overflow-hidden text-xl my-4"
+            className="relative my-4 grid h-screen select-none grid-cols-2 grid-rows-1 place-items-center overflow-hidden text-xl"
         >
             <div className="absolute top-8 laptop:left-8 desktop:static">
                 <h1 className="text-5xl laptop:text-6xl">What I use</h1>
@@ -35,7 +35,7 @@ const FrontendSection: FC<object> = () => {
         before:desktop:w-16
         before:desktop:bg-[linear-gradient(to_right,transparent,rgba(25,25,25,1)_40%)]"
             >
-                <div className="absolute left-5 top-1/2 animate-bounce font-code text-xl hidden laptop:block laptop:text-xl">
+                <div className="absolute left-5 top-1/2 hidden animate-bounce font-code text-xl laptop:block laptop:text-xl">
                     Move your cursor here...
                 </div>
                 {!revisit && (

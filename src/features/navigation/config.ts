@@ -29,5 +29,5 @@ export const navigationConfig: NavigationConfig = [
     {
         label: "Contact Me",
         scrollContext: "Contact",
-    }
+    },
 ];

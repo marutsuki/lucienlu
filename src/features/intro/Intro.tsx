@@ -25,10 +25,10 @@ const Intro: FC<object> = () => {
     return (
         <section
             ref={sectionRef}
-            className="grid h-[100svh] select-none place-items-center border-[16px] border-primary bg-backdrop bg-cover overflow-hidden"
+            className="grid h-[100svh] select-none place-items-center overflow-hidden border-[16px] border-primary bg-backdrop bg-cover"
         >
             <div
-                className="absolute bottom-0 left-0 h-32 laptop:h-64 w-full cursor-pointer bg-gradient-to-t from-primary to-transparent"
+                className="absolute bottom-0 left-0 h-32 w-full cursor-pointer bg-gradient-to-t from-primary to-transparent laptop:h-64"
                 onClick={toNextSection}
             />
             <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2">
