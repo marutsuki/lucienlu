@@ -43,19 +43,19 @@ const ProjectSection: FC<object> = () => {
     return (
         <section
             ref={sectionRef}
-            className={`grid-rows-auto relative my-4 grid grid-cols-1 place-items-center overflow-hidden text-xl laptop:h-screen desktop:grid-cols-2 desktop:grid-rows-1`}
+            className={`grid-rows-auto relative my-4 grid grid-cols-1 place-items-center overflow-hidden text-xl laptop:h-screen desktop:grid-cols-leftRightRight ldesktop:grid-cols-2 desktop:grid-rows-1`}
         >
             <div>
                 <h1 className="select-none font-code text-5xl laptop:text-6xl">
                     Project Showcase
                 </h1>
             </div>
-            <div className="laptop:m-8">
+            <div>
                 <GridMap grid={gridLayout}>
                     {repoConfig.repos.slice(0, 7).map((repo, index) => (
                         <div
-                            className="border-secondary group relative m-2 flex cursor-pointer select-none flex-col justify-between
-                        overflow-hidden border-2 bg-primary p-4 duration-300 hover:scale-x-105 desktop:m-4"
+                            className="border-secondary group relative flex cursor-pointer select-none flex-col justify-between
+                        overflow-hidden border-2 bg-primary p-4 duration-300 hover:scale-x-105 m-2"
                             key={"project" + index}
                             onClick={() => window.open(repo.url, "_blank")}
                             style={{
@@ -65,7 +65,7 @@ const ProjectSection: FC<object> = () => {
                             <div className="absolute inset-0 -z-10 bg-sunset opacity-0 duration-200 group-active:opacity-100" />
                             <div>
                                 <div className="flex justify-between">
-                                    <h1 className="text-lg duration-300 group-hover:drop-shadow-[0px_0px_1px_rgba(255,255,255,1)] desktop:mb-4 desktop:text-xl">
+                                    <h1 className="text-lg duration-300 group-hover:drop-shadow-[0px_0px_1px_rgba(255,255,255,1)] mb-2 ldesktop:mb-4 ldesktop:text-xl">
                                         {repo.title}
                                     </h1>
                                     <GenericSvg
@@ -74,7 +74,7 @@ const ProjectSection: FC<object> = () => {
                                         fill="white"
                                     />
                                 </div>
-                                <p className="text-left font-code text-sm laptop:text-base desktop:text-lg">
+                                <p className="text-left font-code text-sm laptop:text-sm desktop:text-base ldesktop:text-lg">
                                     {repo.description}
                                 </p>
                             </div>

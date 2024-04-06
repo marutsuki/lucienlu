@@ -15,11 +15,11 @@ const ContactSection: FC<object> = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative grid h-screen select-none grid-cols-2 grid-rows-1 place-items-center overflow-hidden text-xl"
+            className="relative grid h-screen select-none laptop:grid-cols-2 grid-rows-1 place-items-center overflow-hidden text-xl"
         >
             <div className="">
-                <ul className="flex flex-col items-end [&>li]:m-2">
-                    <li>
+                <ul className="flex flex-col laptop:items-end [&>li]:m-2 max-tablet:[&>li]:flex [&>li]:flex-col-reverse">
+                    <li className="">
                         <a
                             href="mailto:lucienlu@melonbreads.com"
                             className="cursor-pointer select-text"
@@ -42,7 +42,7 @@ const ContactSection: FC<object> = () => {
             </div>
             <div className="absolute top-8 laptop:left-8 desktop:static">
                 <h1 className="font-code text-5xl laptop:text-6xl">
-                    Contact Me<span className="animate-blink">_</span>
+                    Contact Me<span className="animate-blink max-tablet:hidden">_</span>
                 </h1>
             </div>
         </section>

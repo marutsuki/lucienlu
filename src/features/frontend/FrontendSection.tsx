@@ -21,7 +21,7 @@ const FrontendSection: FC<object> = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative my-4 grid h-screen select-none grid-cols-2 grid-rows-1 place-items-center overflow-hidden text-xl"
+            className="relative my-4 grid h-screen select-none desktop:grid-cols-leftRightRight ldesktop:grid-cols-2 grid-rows-1 place-items-center overflow-hidden text-xl"
         >
             <div className="absolute top-8 laptop:left-8 desktop:static">
                 <h1 className="text-5xl laptop:text-6xl">What I use</h1>

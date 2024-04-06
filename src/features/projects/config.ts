@@ -22,7 +22,7 @@ export const repoConfig: RepoSectionConfig = {
         {
             title: "maru-github-viewer",
             description:
-                "A NextJS application where you can view GitHub profiles in an aesthetic gaming theme.",
+                "A NextJS app where you can view GitHub profiles in an aesthetic theme.",
             url: "https://marutsuki.github.io/maru-github-viewer/",
             preview: "github-viewer.png",
         },
@@ -42,13 +42,13 @@ export const repoConfig: RepoSectionConfig = {
         {
             title: "OOP-Design-Patterns",
             description:
-                "A Java dump of example object oriented designs, demonstrating the 23 Gang of Four design patterns.",
+                "A Java dump of example object oriented design patterns.",
             url: "https://github.com/marutsuki/OOP-Design-Patterns/",
         },
         {
             title: "HTTP-1.0-server-in-C",
             description:
-                "Just a simple HTTP 1.0 server implementation written in C. Serves static files including content such as text, images or videos, only supports GET requests.",
+                "A simple HTTP 1.0 server written in C. Serves static content such as text, images or videos.",
             url: "https://github.com/marutsuki/HTTP-1.0-server-in-C/",
         },
         {

@@ -5,13 +5,9 @@ export default {
     theme: {
         screens: {
             tablet: "640px",
-            // => @media (min-width: 640px) { ... }
-
             laptop: "1024px",
-            // => @media (min-width: 1024px) { ... }
-
             desktop: "1280px",
-            // => @media (min-width: 1280px) { ... }
+            ldesktop: "1536px",
         },
         fontFamily: {
             primary: "'Hedvig Letters Sans', sans-serif",
@@ -36,6 +32,10 @@ export default {
                 overlay: "rgba(0,0,0,0.5)",
                 accent: "#7c6ec2",
                 textBackground: "rgba(0, 0, 0, 0.5)",
+            },
+            gridTemplateColumns: {
+                leftLeftRight: "3fr 2fr",
+                leftRightRight: "2fr 3fr",
             },
             animation: {
                 overshootSpin:

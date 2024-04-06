@@ -32,7 +32,7 @@ const BackendSection: FC<object> = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative my-4 grid h-screen select-none grid-cols-1 grid-rows-2 place-items-center overflow-hidden text-xl laptop:grid-rows-1 desktop:grid-cols-2"
+            className="relative my-4 grid h-screen select-none desktop:grid-cols-leftLeftRight ldesktop:grid-cols-2 grid-cols-1 grid-rows-2 place-items-center overflow-hidden text-xl laptop:grid-rows-1"
         >
             <div className="absolute top-48 flex items-center desktop:static">
                 <Index
