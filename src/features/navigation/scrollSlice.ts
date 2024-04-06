@@ -6,7 +6,8 @@ export type ScrollContext =
     | "AboutMe"
     | "Frontend"
     | "Backend"
-    | "Projects";
+    | "Projects"
+    | "Contact";
 
 const initialState: { context: ScrollContext } = {
     context: "Intro",

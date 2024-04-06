@@ -26,4 +26,8 @@ export const navigationConfig: NavigationConfig = [
         label: "Project Showcase",
         scrollContext: "Projects",
     },
+    {
+        label: "Contact Me",
+        scrollContext: "Contact",
+    }
 ];

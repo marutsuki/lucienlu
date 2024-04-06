@@ -17,7 +17,7 @@ import { isMobile } from "../../util/screen";
 const MINIMUM_DISTANCE_BEFORE_DEREGISTERING_CLICK = 50;
 
 const NavigationMenu: FC<object> = () => {
-    const [active, setActive] = useState(true);
+    const [active, setActive] = useState(!isMobile());
     const menuRef = useRef<HTMLMenuElement>(null);
     const openCloseRef = useRef<HTMLDivElement>(null);
     const dispatch = useAppDispatch();
