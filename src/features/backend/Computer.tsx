@@ -40,7 +40,7 @@ const Computer: FC<ComputerProps> = ({ className, ...props }) => {
     return (
         <div
             className={`${className} relative m-auto h-[360px] w-[240px] border-8 border-content before:absolute before:-left-2 before:bottom-[100%] before:h-4
-        before:w-[240px] before:bg-content after:absolute after:bottom-[1rem] 
+        before:w-[260px] before:bg-content after:absolute after:bottom-[1rem] 
         after:h-8 after:w-8 after:-translate-x-1/2 after:rounded-full after:bg-content
         laptop:h-[360px] laptop:w-[640px] laptop:px-4 laptop:py-2 before:laptop:absolute
         before:laptop:bottom-[-4rem] before:laptop:left-1/2 before:laptop:h-12 before:laptop:w-12 before:laptop:-translate-x-1/2
@@ -62,7 +62,7 @@ const Computer: FC<ComputerProps> = ({ className, ...props }) => {
                     onKeyDown={search}
                 />
             </div>
-            <div className="flex-col overflow-y-auto p-8 font-code text-base laptop:text-lg [&>h1]:text-2xl laptop:[&>h1]:text-3xl">
+            <div className="flex-col overflow-y-auto h-[260px] laptop:h-auto p-2 laptop:p-8 font-code text-sm laptop:text-lg [&>h1]:text-2xl laptop:[&>h1]:text-3xl">
                 {content}
             </div>
         </div>

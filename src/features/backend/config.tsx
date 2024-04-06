@@ -21,10 +21,8 @@ export const backendSectionConfig: BackendSectionConfig = [
         url: "http://localhost:3000/nodejs",
         content: (
             <>
-                <h1>NodeJS</h1>With TypeScript, NodeJS is one of the cleanest
-                and efficient environments out there, how quickly a developer
-                can spin up a few endpoints in this environment and integrate
-                them with a database or upstream astonishes me. My go-to for any
+                <h1>NodeJS</h1>NodeJS is one of the cleanest
+                and efficient environments out there, the single-threaded event loop model really makes code much easier to debug and work with. My go-to for any
                 server-side development.
             </>
         ),
@@ -37,8 +35,8 @@ export const backendSectionConfig: BackendSectionConfig = [
                 <h1>Express</h1>
                 <p>
                     Express is perfect for writing any backend server, with how
-                    lightweight the framework is, it&apos;s my go-to to develop
-                    any sort of API.
+                    lightweight the framework is, it&apos;s my go-to tool to spin up a quick API for
+                    any sort of app.
                 </p>
             </>
         ),
@@ -96,7 +94,7 @@ export const backendSectionConfig: BackendSectionConfig = [
                 <p>
                     Kafka is one of the most powerful distributed messaging
                     systems out there currently. I&apos;ve been lucky to acquire
-                    professional exposure to this technology, via Spring Kafka
+                    professional exposure to this technology through Spring Kafka
                     in Java.
                 </p>
             </>

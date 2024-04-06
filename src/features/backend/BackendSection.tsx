@@ -49,10 +49,10 @@ const BackendSection: FC<object> = () => {
                             ),
                     }))}
                     active={pageId}
-                    className="hidden laptop:block"
+                    className="laptop:block !m-2"
                     activeItemClassName="drop-shadow-[0_0_5px_rgba(255,255,255,1)] before:w-full"
-                    itemClassName={`hover:bg- relative group p-2 m-2 transition-all cursor-pointer
-                    before:absolute before:bottom-0 before:left-0 before:content-[''] before:h-1 before:w-0 before:bg-content before:duration-300`}
+                    itemClassName="text-base relative group p-2 m-2 transition-all cursor-pointer
+                    before:absolute before:bottom-0 before:left-0 before:content-[''] before:h-1 before:w-0 before:bg-content before:duration-300"
                     itemChildren={
                         <div className="absolute inset-0 -z-10 bg-sunset opacity-0 shadow-inner duration-300 content-[''] group-hover:opacity-50" />
                     }
