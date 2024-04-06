@@ -13,6 +13,7 @@ import { useSelector } from "react-redux";
 import GenericSvg from "../../components/symbols/SvgSymbols";
 import { useCookie } from "../../hooks";
 import { isMobile } from "../../util/screen";
+import { clamp } from "../../util/math";
 
 const MINIMUM_DISTANCE_BEFORE_DEREGISTERING_CLICK = 50;
 
@@ -46,9 +47,12 @@ const NavigationMenu: FC<object> = () => {
                     deltaX +
                     "px";
                 menuRef.current.style.top =
-                    parseInt(menuRef.current.style.top.split("px")[0]) +
-                    deltaY +
-                    "px";
+                    clamp(
+                        parseInt(menuRef.current.style.top.split("px")[0]) +
+                            deltaY,
+                        0,
+                        window.innerHeight - menuRef.current.clientHeight
+                    ) + "px";
                 dragDistance += Math.sqrt(deltaX ** 2 + deltaY ** 2);
             }
             prevX = e.clientX;
