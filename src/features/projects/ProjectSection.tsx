@@ -11,18 +11,20 @@ const ProjectSection: FC<object> = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const gridLayout = useMemo(
         () =>
-            screenWidth > 1024
+            screenWidth >= 1024
                 ? [
+                      ["g6", "g6", "g2"],
+                      ["g7", "g3", "g2"],
+                      ["g7", "g3", "g5"],
                       ["g1", "g3", "g5"],
-                      ["g1", "g3", "g5"],
-                      ["g2", "g3", "g6"],
-                      ["g2", "g3", "g6"],
-                      ["g2", "g4", "g4"],
+                      ["g1", "g4", "g4"],
+                      ["g1", "g4", "g4"],
                   ]
                 : [
                       ["g1", "g2"],
                       ["g3", "g4"],
                       ["g5", "g6"],
+                      ["g7", "g7"],
                   ],
         [screenWidth]
     );
@@ -50,7 +52,7 @@ const ProjectSection: FC<object> = () => {
             </div>
             <div className="laptop:m-8">
                 <GridMap grid={gridLayout}>
-                    {repoConfig.repos.slice(0, 6).map((repo, index) => (
+                    {repoConfig.repos.slice(0, 7).map((repo, index) => (
                         <div
                             className="border-secondary group relative m-2 flex cursor-pointer select-none flex-col justify-between
                         overflow-hidden border-2 bg-primary p-4 duration-300 hover:scale-x-105 desktop:m-4"
