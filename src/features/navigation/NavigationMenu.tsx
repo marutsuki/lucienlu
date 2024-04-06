@@ -20,6 +20,7 @@ const NavigationMenu: FC<object> = () => {
     const [active, setActive] = useState(!isMobile());
     const menuRef = useRef<HTMLMenuElement>(null);
     const openCloseRef = useRef<HTMLDivElement>(null);
+    const resizeRef = useRef<ResizeObserver | null>(null);
     const dispatch = useAppDispatch();
     const scrollContext = useSelector(selectScrollContext);
     const [revisit, setRevisit] = useCookie("revisit");
@@ -104,6 +105,20 @@ const NavigationMenu: FC<object> = () => {
         }
     }, []);
 
+    useEffect(() => {
+        if (menuRef.current) {
+            const observer = new ResizeObserver(() => {
+                if (menuRef.current && parseInt(menuRef.current.style.left) > document.body.clientWidth / 2) {
+                    console.log(document.body.clientWidth, menuRef.current.clientWidth)
+                    menuRef.current.style.left = document.body.clientWidth - menuRef.current.clientWidth + "px";
+                }
+            });
+            observer.observe(menuRef.current);
+            resizeRef.current = observer;
+            return () => observer.disconnect();
+        }
+    }, []);
+
     return (
         <menu
             ref={menuRef}
@@ -141,7 +156,7 @@ const NavigationMenu: FC<object> = () => {
                         dispatch(updateScrollContext(entry.scrollContext)),
                 }))}
                 active={scrollContext.context}
-                className={`${!active && "!max-h-0 !max-w-0 !pb-0"} relative my-0 ml-4 mr-2 max-h-96 max-w-full overflow-hidden pb-4 transition-all duration-300 `}
+                className={`${!active && "!max-h-0 !max-w-0 !pb-0"} relative my-0 ml-4 mr-2 max-h-96 max-w-full overflow-hidden pb-4 transition-all duration-300 whitespace-nowrap`}
                 itemClassName="relative group p-2 transition-all cursor-pointer select-none hover:scale-105 w-full pr-4
                 after:absolute after:bottom-0 after:left-0 after:content-[''] after:h-1 after:w-0 after:bg-content after:duration-300"
                 activeItemClassName="drop-shadow-[0_0_5px_rgba(255,255,255,1)] after:w-full"
