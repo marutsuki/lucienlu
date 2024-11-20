@@ -43,8 +43,20 @@ export default {
                 blink: "blink 1s linear infinite",
                 dashRight: "dash 2s linear infinite",
                 dashLeft: "dash 2s linear infinite reverse",
+                wiggle: "wiggle 3s ease-in-out infinite",
             },
             keyframes: {
+                wiggle: {
+                    "0%": {
+                        transform: "rotate(-5deg)",
+                    },
+                    "50%": {
+                        transform: "rotate(5deg)",
+                    },
+                    "100%": {
+                        transform: "rotate(-5deg)",
+                    },
+                },
                 spin: {
                     "0%": {
                         transform: "rotate(0deg)",

@@ -44,7 +44,10 @@ const AboutMe: FC<object> = () => {
                     Musician, Guitarist, Vocalist
                 </h2>
             </div>
-            <img className="w-48 laptop:w-96" src="brs1.png" />
+            <div className="relative overflow-hidden after:content-normal after:w-full after:h-full after:inset-0 after:absolute after:shadow-[inset_0_0_16px_16px_rgb(25,25,25)]">
+                <img className="w-60 absolute laptop:w-96" src="Illustration2.png" />
+                <img className="animate-wiggle w-48 relative laptop:w-96" src="Illustration.png" />
+            </div>
         </section>
     );
 };
