@@ -21,10 +21,10 @@ const ContactSection: FC<object> = () => {
                 <ul className="flex flex-col laptop:items-end [&>li]:m-2 max-tablet:[&>li]:flex [&>li]:flex-col-reverse">
                     <li className="">
                         <a
-                            href="mailto:lucienlu@melonbreads.com"
+                            href="mailto:lucien.7789@gmail.com"
                             className="cursor-pointer select-text"
                         >
-                            lucienlu@melonbreads.com
+                            lucien.7789@gmail.com
                         </a>
                         <span className="ml-4 font-code text-2xl tracking-widest">
                             EMAIL
