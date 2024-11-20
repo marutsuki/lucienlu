@@ -16,14 +16,34 @@ const AboutMe: FC<object> = () => {
             className="relative my-4 grid h-screen grid-cols-1 grid-rows-2 place-items-center laptop:grid-cols-2 laptop:grid-rows-1"
             ref={sectionRef}
         >
-            <p className="m-8 mb-4 text-left text-base leading-loose laptop:max-w-96 laptop:text-lg">
-                I&apos;m a graduate from the University of Melbourne, passionate
-                about technology and currently working as a full stack developer
-                in Australia.
+            <div className="m-8 mb-4 text-left text-base leading-loose laptop:text-lg">
+                <h1>
+                    Software Engineer
+                </h1>
+                <h2>
+                    Full Stack Developer
+                </h2>
+                <h2 className="text-right">
+                    Java/TypeScript
+                </h2>
                 <div className="h-4" />
-                In my own time, I&apos;m a digitial artist and I like to
-                sometimes experiment with music.
-            </p>
+                <h1 className="text-right">
+                    Passions
+                </h1>
+                <h2 className="text-right">
+                    Technology, UI/UX, Cloud
+                </h2>
+                <div className="h-4" />
+                <h1>
+                    Hobbies
+                </h1>
+                <h2 className="text-left">
+                    Digital Artist
+                </h2>
+                <h2 className="text-right">
+                    Musician, Guitarist, Vocalist
+                </h2>
+            </div>
             <img className="w-48 laptop:w-96" src="brs1.png" />
         </section>
     );
