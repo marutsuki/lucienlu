@@ -14,10 +14,10 @@ export const repoConfig: RepoSectionConfig = {
     username: "marutsuki",
     repos: [
         {
-            title: "chirper",
+            title: "cucumber-reporting",
             description:
-                "A React + NodeJS / Express full stack twitter mockup. Start chirpin' and discover new people.",
-            url: "https://github.com/marutsuki/chirper",
+                "A performance optimised Cucumber HTML test report generator.",
+            url: "https://github.com/marutsuki/cucumber-reporting",
         },
         {
             title: "maru-github-viewer",
