@@ -22,8 +22,8 @@ export const backendSectionConfig: BackendSectionConfig = [
         content: (
             <>
                 <h1>NodeJS</h1>NodeJS is one of the cleanest
-                and efficient environments out there, the single-threaded event loop model really makes code much easier to debug and work with. My go-to for any
-                server-side development.
+                and efficient runtimes out there, the single-threaded event loop model makes code so much easier to debug and work with. 
+                My go-to for any server-side development.
             </>
         ),
     },
@@ -34,9 +34,9 @@ export const backendSectionConfig: BackendSectionConfig = [
             <>
                 <h1>Express</h1>
                 <p>
-                    Express is perfect for writing any backend server, with how
-                    lightweight the framework is, it&apos;s my go-to tool to spin up a quick API for
-                    any sort of app.
+                    Express is my go-to library to spin up a quick API for
+                    I/O based operations. I usually find myself pairing Express with other popular NodeJS libraries, such as
+                    Passport, Mongoose, and Axios.
                 </p>
             </>
         ),
@@ -48,9 +48,10 @@ export const backendSectionConfig: BackendSectionConfig = [
             <>
                 <h1>Java</h1>
                 <p>
-                    My second most confident language behind
+                    My second most familiar language tailing
                     TypeScript/JavaScript, I&apos;ve had abundant experience
-                    working at uni and professionally with this language.
+                    working with apps of all kind in Java, including large scale µServices
+                    and monolithic legacy codebases.
                 </p>
             </>
         ),
@@ -62,25 +63,9 @@ export const backendSectionConfig: BackendSectionConfig = [
             <>
                 <h1>Spring</h1>
                 <p>
-                    My go to framework for Java based web servers, from my
-                    professional career, I&apos;ve been able to work with many
-                    different components as part of the ecosystem, including
-                    Spring Web, Spring MVC, Spring Boot, Spring Security, Spring
-                    Kafka.
-                </p>
-            </>
-        ),
-    },
-    {
-        label: "NextJS",
-        url: "http://localhost:3000/nextjs",
-        content: (
-            <>
-                <h1>NextJS</h1>
-                <p>
-                    A very opinionated framework, I&apos;ve had exposure to both
-                    the Page and App router while working with server side
-                    rendering, mainly through side projects.
+                    My one and only framework for any reasonably sized Java app.
+                    I have extensive experience working with the many Spring Boot starters and libraries, 
+                    including Spring Web, Spring Data JPA, Spring Security, Spring Kafka.
                 </p>
             </>
         ),
@@ -93,9 +78,8 @@ export const backendSectionConfig: BackendSectionConfig = [
                 <h1>Apache Kafka</h1>
                 <p>
                     Kafka is one of the most powerful distributed messaging
-                    systems out there currently. I&apos;ve been lucky to acquire
-                    professional exposure to this technology through Spring Kafka
-                    in Java.
+                    systems out there. I consider myself extremely lucky to acquire
+                    professional exposure and knowledge of this large scale tool.
                 </p>
             </>
         ),

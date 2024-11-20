@@ -71,7 +71,7 @@ const FrontendSection: FC<object> = () => {
                 >
                     <FrontendSkill
                         title="React"
-                        description="I've mainly worked with React both professionally and as a student, it is one of my most confident skills."
+                        description="One of my most familiar tools/libraries out there, within an hour I can easily spin up a quick and slick UI."
                         content={
                             <GenericSvg
                                 className="duration-300 group-hover:fill-[rgba(50,255,225,1)]"
@@ -83,7 +83,7 @@ const FrontendSection: FC<object> = () => {
                     />
                     <FrontendSkill
                         title="Redux"
-                        description="Butter to the bread that is React. I have extensive experience working with this state management library."
+                        description="Butter to the bread that is React. My experience is battle scarred with all the addons from the extensive toolkit."
                         content={
                             <GenericSvg
                                 className="duration-300 group-hover:fill-[rgba(50,255,255,1)]"
@@ -95,7 +95,7 @@ const FrontendSection: FC<object> = () => {
                     />
                     <FrontendSkill
                         title="Tailwind"
-                        description="Although Tailwind is a very opinionated library, I've found it to really speed up my development time."
+                        description="My go to CSS library for any React app. It's like a box of legos, but for web design."
                         content={
                             <GenericSvg
                                 className="duration-300 group-hover:fill-[rgba(100,255,255,1)]"
@@ -107,7 +107,7 @@ const FrontendSection: FC<object> = () => {
                     />
                     <FrontendSkill
                         title="Typescript"
-                        description="My main programming language, it gives me confidence in my code through its powerful typing system."
+                        description="My main programming language, I hope you don't go insane over my crazy type definitions."
                         content={
                             <GenericSvg
                                 className="duration-300 group-hover:fill-[rgba(100,244,255,1)]"
