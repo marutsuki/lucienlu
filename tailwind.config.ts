@@ -15,7 +15,7 @@ export default {
         },
         extend: {
             backgroundImage: {
-                backdrop: "url(../public/backdrop.png)",
+                backdrop: "url(/backdrop.png)",
                 cdBg: `conic-gradient(from 90deg at 50% 50%, rgba(225,186,255,0.7), rgba(255,255,255,0.85), rgba(255,255,255,0.85), 
         rgba(174,255,246,1), rgba(255,255,255,0.5), rgba(255,255,255,0.5), rgba(255,255,255,0.85), rgba(255,218,251,1), rgba(255,255,255,0.85), 
         rgba(244,191,255,0.85), rgba(255,255,255,0.75), rgba(255,255,255,0.85), rgba(251,255,218,1), rgba(255,255,255,0.85), rgba(255,255,255,0.5), rgba(255,255,255,0.5), 
