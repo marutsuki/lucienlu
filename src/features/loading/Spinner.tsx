@@ -4,7 +4,7 @@ const spinnerCss = "absolute animate-overshootSpin w-48";
 
 const Spinner: FC<object> = () => {
     return (
-        <span className="block h-48 w-48 transition-opacity duration-500">
+        <span className="block h-48 w-48 transition-opacity duration-500 invert">
             <img
                 className={spinnerCss.concat(" blur-md animate-delay-0")}
                 src="/spinner.png"
