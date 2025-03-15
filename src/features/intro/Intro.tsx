@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from "react";
+import { FC, useRef } from "react";
 import { useAppDispatch } from "../../store";
 import {
     selectScrollContext,
