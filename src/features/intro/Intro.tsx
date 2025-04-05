@@ -27,10 +27,6 @@ const Intro: FC<object> = () => {
             ref={sectionRef}
             className="grid h-[100svh] select-none place-items-center overflow-hidden border-[16px] border-primary bg-backdrop bg-cover"
         >
-            <img src="gif1.gif" className="absolute scale-[800%]"/>
-            <img src="gif2.gif"/>
-
-            <audio autoPlay id="my_audio" src="bg.mp3"></audio>
             <div
                 className="absolute bottom-0 left-0 h-32 w-full cursor-pointer bg-gradient-to-t from-primary to-transparent laptop:h-64"
                 onClick={toNextSection}
@@ -46,7 +42,7 @@ const Intro: FC<object> = () => {
 
             <div className="mb-24">
                 <h1 className="text-48 p-4 [text-shadow:_0_3px_4px_rgb(0_0_0_/_100%)] laptop:text-[76px]">
-                    HAPPY BIRTHTDAY NATE!!!!!!!!!!
+                    Hello, I&apos;m Lucien
                 </h1>
                 <div className="flex flex-row justify-center">
                     <GenericSvg
