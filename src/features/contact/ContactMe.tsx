@@ -24,18 +24,10 @@ const ContactSection: FC<object> = () => {
                             href="mailto:lucien.7789@gmail.com"
                             className="cursor-pointer select-text"
                         >
-                            lucien.7789@gmail.com
+                            marutsuki.io@gmail.com
                         </a>
                         <span className="ml-4 font-code text-2xl tracking-widest">
                             EMAIL
-                        </span>
-                    </li>
-                    <li>
-                        <a href="tel:0468-435-818" className="select-text">
-                            (+61) 468 435 818
-                        </a>
-                        <span className="ml-4 font-code text-2xl tracking-widest">
-                            PHONE
                         </span>
                     </li>
                 </ul>
