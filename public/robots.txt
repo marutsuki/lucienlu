@@ -1,0 +1,5 @@
+# Allow all bots
+User-agent: *
+
+# Sitemap location
+Sitemap: https://bucket.marutsuki.com/sitemap.xml
